@@ -35,14 +35,14 @@ class MyApp extends StatelessWidget {
                     print('success');
                     _get_user_info();
                   } catch (error) {
-                    print('fale $error');
+                    print('fail $error');
 
                     try {
                       await UserApi.instance.loginWithKakaoAccount();
                       print('success');
                       _get_user_info();
                     } catch (error) {
-                      print('fale $error');
+                      print('fail $error');
                     }
                   }
                 } else {
@@ -51,7 +51,7 @@ class MyApp extends StatelessWidget {
                     print('success');
                     _get_user_info();
                   } catch (error) {
-                    print('fale $error');
+                    print('fail $error');
                   }
                 }
               }),

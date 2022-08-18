@@ -19,8 +19,9 @@ class MyApp extends StatelessWidget {
     return const MaterialApp(
       title: 'flutter example',
       //home: TestPage(),
-      home: KakaoLoginScreen(),
+      //home: KakaoLoginScreen(),
       //home: checkbox(),
+      home: TestApi(),
     );
   }
 }

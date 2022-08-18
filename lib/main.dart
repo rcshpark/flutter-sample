@@ -1,4 +1,9 @@
+import 'package:example/screen/checkbox.dart';
+import 'package:example/screen/test.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
+import 'screen/kakaologin_screen.dart';
 import 'package:kakao_flutter_sdk/kakao_flutter_sdk.dart';
 
 void main() {
@@ -9,54 +14,13 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  void _get_user_info() async {
-    try {
-      User user = await UserApi.instance.me();
-      print('사용자 정보 요청 성공'
-          '\n회원번호:${user.id} '
-          '\n닉네임:${user.kakaoAccount?.profile?.nickname}');
-    } catch (error) {
-      print('사용자 정보 요청 실패 $error');
-    }
-  }
-
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: Container(
-        color: Colors.white,
-        child: Center(
-          child: ElevatedButton(
-              child: const Text('카카오 로그인'),
-              onPressed: () async {
-                if (await isKakaoTalkInstalled()) {
-                  try {
-                    await UserApi.instance.loginWithKakaoTalk();
-                    print('success');
-                    _get_user_info();
-                  } catch (error) {
-                    print('fail $error');
-
-                    try {
-                      await UserApi.instance.loginWithKakaoAccount();
-                      print('success');
-                      _get_user_info();
-                    } catch (error) {
-                      print('fail $error');
-                    }
-                  }
-                } else {
-                  try {
-                    await UserApi.instance.loginWithKakaoAccount();
-                    print('success');
-                    _get_user_info();
-                  } catch (error) {
-                    print('fail $error');
-                  }
-                }
-              }),
-        ),
-      ),
+    return const MaterialApp(
+      title: 'flutter example',
+      //home: TestPage(),
+      home: KakaoLoginScreen(),
+      //home: checkbox(),
     );
   }
 }

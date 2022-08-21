@@ -1,5 +1,7 @@
 import 'package:example/screen/checkbox.dart';
-import 'package:example/screen/test.dart';
+import 'package:example/screen/api_screen.dart';
+import 'package:example/screen/quizhome.dart';
+import 'package:example/test.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -20,8 +22,8 @@ class MyApp extends StatelessWidget {
       title: 'flutter example',
       //home: TestPage(),
       //home: KakaoLoginScreen(),
-      //home: checkbox(),
-      home: TestApi(),
+      home: UseApi(),
+      //home: TestApi(),
     );
   }
 }

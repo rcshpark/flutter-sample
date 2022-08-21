@@ -14,6 +14,7 @@ class TestApi extends StatelessWidget {
 
     url = Uri.parse('https://reqbin.com/sample/post/json');
     response = await http.post(url, body: {
+      //프론트에서 서버로 주는 정보
       'key': 'value',
     });
     print('Response status: ${response.statusCode}');

@@ -2,26 +2,26 @@ import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
-class checkbox extends StatefulWidget {
-  const checkbox({Key? key}) : super(key: key);
+class CheckBox extends StatefulWidget {
+  const CheckBox({Key? key}) : super(key: key);
 
   @override
-  State<checkbox> createState() => _checkboxState();
+  State<CheckBox> createState() => _CheckBoxState();
 }
 
-class _checkboxState extends State<checkbox> {
+class _CheckBoxState extends State<CheckBox> {
   bool _isChecked = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('checkbox'),
+        title: const Text('checkbox'),
         centerTitle: true,
       ),
       body: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text('빨간색 '),
+          const Text('빨간색 '),
           Transform.scale(
             scale: 1.5,
             child: Checkbox(

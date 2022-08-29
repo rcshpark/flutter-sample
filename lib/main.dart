@@ -1,15 +1,18 @@
 import 'package:example/screen/checkbox.dart';
 import 'package:example/screen/api_screen.dart';
 import 'package:example/screen/quizhome.dart';
-import 'package:example/test.dart';
+import 'package:example/apitest.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'screen/kakaologin_screen.dart';
 import 'package:kakao_flutter_sdk/kakao_flutter_sdk.dart';
+import 'package:firebase_core/firebase_core.dart';
 
-void main() {
+void main() async {
   KakaoSdk.init(nativeAppKey: 'e23034cf2fa02c3024d5330a090b6b62');
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
   runApp(const MyApp());
 }
 

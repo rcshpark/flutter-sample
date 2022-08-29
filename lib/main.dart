@@ -1,3 +1,5 @@
+import 'package:example/firebase/firebasetest.dart';
+import 'package:example/firebase/postpage.dart';
 import 'package:example/screen/checkbox.dart';
 import 'package:example/screen/api_screen.dart';
 import 'package:example/screen/quizhome.dart';
@@ -25,8 +27,10 @@ class MyApp extends StatelessWidget {
       title: 'flutter example',
       //home: TestPage(),
       //home: KakaoLoginScreen(),
-      home: UseApi(),
+      //home: UseApi(),
       //home: TestApi(),
+      //home: FirebaseTest(),
+      home: MakePostPage(),
     );
   }
 }

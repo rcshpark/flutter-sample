@@ -4,6 +4,7 @@ import 'package:example/screen/checkbox.dart';
 import 'package:example/screen/api_screen.dart';
 import 'package:example/screen/quizhome.dart';
 import 'package:example/apitest.dart';
+import 'package:example/screen/textfield.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -30,7 +31,8 @@ class MyApp extends StatelessWidget {
       //home: UseApi(),
       //home: TestApi(),
       //home: FirebaseTest(),
-      home: MakePostPage(),
+      //home: MakePostPage(),
+      home: TextFormScreen(),
     );
   }
 }

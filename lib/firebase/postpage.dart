@@ -67,6 +67,16 @@ class _MakePostPageState extends State<MakePostPage> {
                 },
                 child: const Text('upload'),
               ),
+              // crud -create, read, udate, delete
+              ElevatedButton(
+                onPressed: () {
+                  fireStore.collection('posts').doc().update({
+                    'name': name,
+                    'content': content,
+                  });
+                },
+                child: const Text('update'),
+              ),
             ],
           ),
         ),

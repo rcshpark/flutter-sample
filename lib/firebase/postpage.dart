@@ -15,7 +15,7 @@ class _MakePostPageState extends State<MakePostPage> {
 
   TextEditingController titleController = TextEditingController();
   TextEditingController contentController = TextEditingController();
-  String name = '';
+  String title = '';
   String content = '';
 
   @override
@@ -40,7 +40,7 @@ class _MakePostPageState extends State<MakePostPage> {
                 ),
                 onChanged: (value) {
                   setState(() {
-                    name = value;
+                    title = value;
                   });
                 },
               ),
@@ -60,8 +60,8 @@ class _MakePostPageState extends State<MakePostPage> {
               ),
               ElevatedButton(
                 onPressed: () {
-                  fireStore.collection('posts').doc().set({
-                    'name': name,
+                  fireStore.collection('posts').doc('test01').set({
+                    'title': title,
                     'content': content,
                   });
                 },
@@ -70,12 +70,21 @@ class _MakePostPageState extends State<MakePostPage> {
               // crud -create, read, udate, delete
               ElevatedButton(
                 onPressed: () {
-                  fireStore.collection('posts').doc().update({
-                    'name': name,
+                  fireStore.collection('posts').doc('test01').update({
+                    'title': title,
                     'content': content,
                   });
                 },
                 child: const Text('update'),
+              ),
+              ElevatedButton(
+                onPressed: () {
+                  fireStore
+                      .collection('posts')
+                      .doc('test01')
+                      .delete(); // collection, doc 지정 시 내부 db에 저장되있는 정보 모두 삭제
+                },
+                child: const Text('delete'),
               ),
             ],
           ),

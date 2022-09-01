@@ -24,7 +24,7 @@ class ListViewScreen extends GetView<InfiniteScrollController> {
               print(controller.hasMore.value);
 
               if (index < controller.data.length) {
-                var datum = controller.data[index];
+                var datum = controller.data[index]; // 데이터 번호
                 return Material(
                   elevation: 10.0,
                   child: Container(

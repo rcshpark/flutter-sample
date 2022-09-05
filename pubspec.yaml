@@ -47,7 +47,7 @@ dependencies:
   flutter_swiper:
   auto_size_text:
   cloud_firestore: ^3.4.6
-
+  get:
 
 dev_dependencies:
   flutter_test:

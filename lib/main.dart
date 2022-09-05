@@ -1,5 +1,8 @@
 import 'package:example/firebase/firebasetest.dart';
-import 'package:example/firebase/postpage.dart';
+import 'package:example/firebase/homescreen.dart';
+import 'package:example/json_example/json_test.dart';
+import 'package:example/listview/postcard.dart';
+import 'package:example/listview/postpage.dart';
 import 'package:example/listview/Binding/listview_binding.dart';
 import 'package:example/listview/listviewscreen.dart';
 import 'package:example/screen/checkbox.dart';
@@ -37,7 +40,9 @@ class MyApp extends StatelessWidget {
       //home: FirebaseTest(),
       //home: MakePostPage(),
       //home: TextFormScreen(),
-      home: ListViewScreen(),
+      //home: ListViewScreen(),
+      home: JsonTestScreen(),
+      //home: const HomeScreen(),
     );
   }
 }

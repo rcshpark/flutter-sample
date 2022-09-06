@@ -1,3 +1,4 @@
+import 'package:example/board/screen/screen.dart';
 import 'package:example/firebase/firebasetest.dart';
 import 'package:example/firebase/homescreen.dart';
 import 'package:example/json_example/json_test.dart';
@@ -41,8 +42,9 @@ class MyApp extends StatelessWidget {
       //home: MakePostPage(),
       //home: TextFormScreen(),
       //home: ListViewScreen(),
-      home: JsonTestScreen(),
+      //home: JsonTestScreen(),
       //home: const HomeScreen(),
+      home: const Test(),
     );
   }
 }

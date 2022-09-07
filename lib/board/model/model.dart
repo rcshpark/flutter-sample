@@ -4,7 +4,7 @@ class MyModel {
   late String title;
   late String content;
 
-  MyModel({title, body});
+  MyModel({title, content});
 
   MyModel.fromJson(Map<String, dynamic> json) {
     title = json['title'];
